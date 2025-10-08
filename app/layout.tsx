@@ -1,6 +1,7 @@
 // app/layout.tsx
 import { ThemeModeScript } from "flowbite-react";
 import { Geist, Geist_Mono } from "next/font/google";
+import Profile from "./components/profile";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -12,27 +13,31 @@ export default function RootLayout() {
       <body>
         <ThemeModeScript />
         {/* Navbar */}
-        <header className="bg-purple-950 ">
-          <nav className="flex justify-between items-center w-[92%]">
-            <div className="max-w-screen-xl flex flex-row items-center justify-between p-4 ">
-              <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <header >
+          <nav className="bg-purple-950 ">
+          <div className="flex justify-between items-center p-4">
+            <div className="max-w-screen-xl flex flex-row items-center justify-between ">
+              <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse ">
                 <span className="text-2xl font-semibold whitespace-nowrap dark:text-white">Serendipia</span>
               </a>
             </div>
+
             <div className="">
-                <ul className="font-medium flex items-center gap-[4vw]">
+                <ul className="font-medium flex flex-col items-center gap-[4vw] lg:flex-row text-lg">
                   <li>
-                    <a href="/newin" className="transform hover:scale-125 transition text-white " aria-current="page">New In</a>
+                    <a href="/newin" className="hover:scale-125 hover:contrast-125 transition-transform text-white " aria-current="page">New In</a>
                   </li>
                   <li>
-                    <a href="/about" className="hover:scale-110 transition-transform text-white " aria-current="page">Catalog</a>
+                    <a href="/catalog" className="transform hover:scale-125 transition  text-white " aria-current="page">Catalog</a>
                   </li>
                   <li>
-                    <a href="/about" className="hover:scale-110 transition-transform text-white " aria-current="page">Outlet</a>
+                    <a href="/outlet" className="transform hover:scale-125 transition text-white " aria-current="page">Outlet</a>
                   </li>
                 </ul>
-              </div>
-              
+            </div>
+
+            <Profile className="hover:scale-125 hover:contrast-125 transition-transform"/>
+</div>
           </nav>
         </header>
       </body>
