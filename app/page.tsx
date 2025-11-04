@@ -9,7 +9,7 @@ const ChevronRightIcon = () => <span className="text-5xl">{">"}</span>;
 // --- 2. Hero Carousel ---
 const HeroCarousel: React.FC = () => {
   return (
-    <section className="relative mt-2 flex h-72 items-center justify-between bg-purple-500 p-4 md:h-128">
+    <section className="relative mt-2 flex h-72 items-center justify-between bg-purple-500 p-2 md:h-128">
       <button className="absolute left-0 p-4 text-white opacity-75 hover:opacity-100">
         <ChevronLeftIcon />
       </button>
@@ -24,7 +24,6 @@ const HeroCarousel: React.FC = () => {
   );
 };
 
-// --- 4. Best Sellers Section ---
 const BestSellers: React.FC = () => {
   // En una app real, esto vendría de una API
   const products = [
@@ -66,7 +65,6 @@ const BestSellers: React.FC = () => {
   );
 };
 
-// --- 5. Promo Banner ---
 const PromoBanner: React.FC = () => {
   return (
     <section className="bg-dotted-pattern mb-2 border-y-2 border-purple-200 bg-pink-50 px-4 py-12">
@@ -93,7 +91,6 @@ const PromoBanner: React.FC = () => {
   );
 };
 
-// --- 7. Main App Component ---
 const App: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col">

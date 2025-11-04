@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
+import CategoryCard from "../components/CategoryCard";
 
 const BestSellers: React.FC = () => {
   // En una app real, esto vendría de una API

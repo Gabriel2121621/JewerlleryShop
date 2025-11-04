@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Profile from "./components/profile";
+import ClientLoader from "./components/ClientLoader";
 import "./globals.css";
 
 // 1. DEFINIR METADATOS
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased dark:bg-gray-900">
+        <ClientLoader />
         {/* Navbar (Header) */}
         <header className="w-full bg-purple-950">
           <nav className="mx-auto flex max-w-screen-xl items-center justify-between p-4">
@@ -55,11 +57,11 @@ export default function RootLayout({
                 </li>
                 <li>
                   <a
-                    href="/catalog"
+                    href="/categories"
                     className="transform text-white transition hover:scale-125"
                     aria-current="page"
                   >
-                    Catalog
+                    Categories
                   </a>
                 </li>
                 <li>
