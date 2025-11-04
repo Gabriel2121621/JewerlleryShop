@@ -3,5 +3,14 @@
 @source "../.flowbite-react/class-list.json";
 @tailwind utilities;
 
-
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .bg-dotted-pattern {
+    background-image: radial-gradient(
+      theme("colors.purple.200") 1px,
+      transparent 1px
+    );
+    background-size: 10px 10px;
+  }
+}
