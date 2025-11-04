@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ name, price }) => {
   return (
-    <div className="rounded-lg p-6 shadow-md">
+    <div className="bg-dotted-pattern rounded-lg p-6 shadow-md">
       <div className="relative flex h-80 items-center justify-center rounded bg-purple-950">
         <ImageIcon />
         <button className="absolute top-2 right-2 text-2xl text-white">
