@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Profile from "./components/profile";
+import Profile from "./components/icons/profile";
 import ClientLoader from "./components/ClientLoader";
 import "./globals.css";
+import ShoppingCart from "./components/icons/cart";
 
 // 1. DEFINIR METADATOS
 export const metadata = {
@@ -75,9 +76,12 @@ export default function RootLayout({
                 </li>
               </ul>
             </div>
-
-            {/* Profile Icon */}
-            <Profile className="transition-transform hover:scale-125 hover:contrast-125" />
+            <div className="flex items-center">
+              <a href="shoppingcart">
+                <ShoppingCart className="mr-4 ml-4 transition-transform hover:scale-125 hover:contrast-125" />
+              </a>
+              <Profile className="transition-transform hover:scale-125 hover:contrast-125" />
+            </div>
           </nav>
         </header>
         {/* CONTENEDOR PRINCIPAL
